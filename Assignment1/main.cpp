@@ -3,10 +3,44 @@
 #include <iostream>
 #include <string>
 #include <queue>
-#include "management.h"
+#include "Management.h"
 
 using namespace std;
 
+void drawMainMenu();
+
+int main(){
+    cout << "hello world\n";
+    drawMainMenu();
+    Management shelter;
+    int userIn = 0;
+    cin>>userIn;
+    switch (userIn){
+                case 1:
+                    shelter.addCat();
+                    break;
+ 
+                case 2:
+                    shelter.addDog();
+                    break;
+             
+                case 3:
+                    shelter.adoptAny();
+                    break;
+ 
+                case 4:
+                    shelter.adoptCat();
+                    break;
+     
+                case 5:
+                    shelter.adoptDog();
+                    break;
+                 
+                default:
+                    cout<<"INVALID INPUT";
+                    break;
+    }
+}
 
 void drawMainMenu(){
     cout<<"Welcome to the Animal Shelter"<<endl<<endl<<endl;
@@ -19,38 +53,4 @@ void drawMainMenu(){
 
 
     cout<<"Use number keys to select an option";
-    return;
-}
-
-
-void AnimalFarm::managmentSystem(){
-
-    drawMainMenu();
-    int userIn;
-    cin>>userIn;
-    switch (userIn){
-                case 1:
-                    addCat();
-                    break;
- 
-                case 2:
-                    addDog();
-                    break;
-             
-                case 3:
-                    adoptAny();
-                    break;
- 
-                case 4:
-                    adoptCat();
-                    break;
-     
-                case 5:
-                    adoptDog();
-                    break;
-                 
-                default:
-                    cout<<"INVALID INPUT";
-                    break;
-            }
 }

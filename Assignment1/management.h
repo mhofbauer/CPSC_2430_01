@@ -5,17 +5,26 @@
 #include <queue>
 using namespace std;
 
-unsigned int petIdCounter;
+unsigned int petIdCounter = 0;
+
+#ifndef Management_H
+#define Management_H
 
 struct Pet{
     string petName;
 	int petId;
 };
 
-class AnimalFarm{
+class Management{
 	public:    
         queue<Pet*> catQueue;
         queue<Pet*> dogQueue;
         void addCat();
-        void helloWorld();
+        void addDog();
+        void adoptDog();
+        void adoptCat();
+        void adoptAny();
+        void cleanMemCat();
+        void cleanMemDog();
 };
+#endif
