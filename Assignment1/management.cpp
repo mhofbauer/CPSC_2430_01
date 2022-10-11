@@ -2,10 +2,11 @@
 #include <stdio.h>
 #include <iostream>
 #include <string>
-#include <stack>
-#include<bits/stdc++.h>
+#include <queue>
+#include <management.h>
+
 using namespace std;
 
-main(){
+void managmentSystem(){
 
 }
