@@ -60,7 +60,7 @@ double root5(int n,double y){
         return y; //returns accurate guess for root
     }else{
         double newGuess = ((4*y)+(n/pow(y,4)))/5; //extrapolated formula for finding the fifth root
-        root5(n,newGuess); //repeats the guess process and calls the recursive funciotn
+        return root5(n,newGuess); //repeats the guess process and calls the recursive funciotn
         //return y; //error case to avoid non-void function //note unsure what to do here as if I add this it breaks the function but otherwise I get a wreturn type error
     }
 }
@@ -111,7 +111,7 @@ double ramanujan(int depthCounter,double recursiveOutput){ //note will not take 
     if (depthCounter == 0){ //if our depth couter is at zero then we have completed all the nessacry nested expression. Our function evaluates from the outside in, so when zero is reached the intended starting point in traditional order of operations
         return nestedResult; //outputs final result
     }else{
-        ramanujan(depthCounter-1,nestedResult);//if the desired depth is not reached the nestedOutput is put back into the function to be repeated.
+        return ramanujan(depthCounter-1,nestedResult);//if the desired depth is not reached the nestedOutput is put back into the function to be repeated.
     }
 }
 
