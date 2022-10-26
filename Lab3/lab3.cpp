@@ -80,11 +80,20 @@ int main() {
         t.insertNode (29);
         t.insertNode (30);
         t.insertNode (9);
+        
         // inorder display
+        cout<<"Inorder"<<endl;
         t.inorderDisplay();  // the output should be: 7, 9, 10, 29, 30
+        cout<<endl;
+        
         // preorder display
+        cout<<"Preorder"<<endl;
         t.preorderDisplay();  // the output should be: 10, 7, 9, 29, 30
+        cout<<endl;
+        
         // postorder display
+        cout<<"Postorder"<<endl;
         t.postorderDisplay();  // the output should be: 9, 7, 30, 29, 10
+        cout<<endl;
         return 0; 
         }
